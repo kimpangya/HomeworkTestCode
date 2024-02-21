@@ -73,7 +73,7 @@ public class PostController {
         try {
             responseDto = postService.getPost(postId);
         } catch(IllegalArgumentException e){
-            return new ResponseDto("게시글 조회 실패 : " + e.getMessage(), HttpStatus.BAD_REQUEST.value(), null)
+            return new ResponseDto("게시글 조회 실패 : " + e.getMessage(), HttpStatus.BAD_REQUEST.value(), null);
         }
         return new ResponseDto("게시글 조회 성공", HttpStatus.OK.value(), responseDto);
     }
